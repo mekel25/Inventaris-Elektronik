@@ -11,6 +11,9 @@ return [
     | messages sent by your application. Alternative mailers may be setup
     | and used as needed; however, this mailer will be used by default.
     |
+    | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
+    |            "postmark", "log", "array", "failover", "roundrobin"
+    |
     */
 
     'default' => env('MAIL_MAILER', 'smtp'),
