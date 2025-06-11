@@ -12,7 +12,7 @@ export default function ForgotPassword({ status }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route('password.email'));
+        post(route('password.email')); // Memanggil rute POST /forgot-password
     };
 
     return (
@@ -20,8 +20,7 @@ export default function ForgotPassword({ status }) {
             <Head title="Forgot Password" />
 
             <div className="mb-4 text-sm text-gray-600">
-                Forgot your password? No problem. Just let us know your email address and we will email you a password
-                reset link that will allow you to choose a new one.
+                Lupa password Anda? Jangan khawatir. Cukup beritahu kami alamat email Anda dan kami akan mengirimkan tautan reset password yang akan memungkinkan Anda memilih yang baru.
             </div>
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
@@ -41,7 +40,7 @@ export default function ForgotPassword({ status }) {
 
                 <div className="flex items-center justify-end mt-4">
                     <PrimaryButton className="ms-4" disabled={processing}>
-                        Email Password Reset Link
+                        Kirim Link Reset Password
                     </PrimaryButton>
                 </div>
             </form>
